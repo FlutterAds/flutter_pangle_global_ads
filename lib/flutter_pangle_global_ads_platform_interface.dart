@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'flutter_pangle_global_ads_method_channel.dart';
@@ -8,7 +9,8 @@ abstract class FlutterPangleGlobalAdsPlatform extends PlatformInterface {
 
   static final Object _token = Object();
 
-  static FlutterPangleGlobalAdsPlatform _instance = MethodChannelFlutterPangleGlobalAds();
+  static FlutterPangleGlobalAdsPlatform _instance =
+      MethodChannelFlutterPangleGlobalAds();
 
   /// The default instance of [FlutterPangleGlobalAdsPlatform] to use.
   ///
@@ -25,5 +27,21 @@ abstract class FlutterPangleGlobalAdsPlatform extends PlatformInterface {
 
   Future<String?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  /// 初始化广告
+  /// [appId] 应用ID
+  /// [appIcon] 应用 icon
+  /// [debug] 是否是debug模式
+  Future<void> initAd(String appId,
+      {String? appIcon, bool debug = kDebugMode}) {
+    throw UnimplementedError('initAd() has not been implemented.');
+  }
+
+  /// 展示开屏广告
+  /// [posId] 广告位ID
+  /// [timeout] 超时时间
+  Future<void> showSplashAd(String posId, {int timeout = 3000}) {
+    throw UnimplementedError('showSplashAd() has not been implemented.');
   }
 }

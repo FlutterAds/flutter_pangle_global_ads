@@ -4,14 +4,29 @@ import 'package:flutter/services.dart';
 import 'flutter_pangle_global_ads_platform_interface.dart';
 
 /// An implementation of [FlutterPangleGlobalAdsPlatform] that uses method channels.
-class MethodChannelFlutterPangleGlobalAds extends FlutterPangleGlobalAdsPlatform {
+class MethodChannelFlutterPangleGlobalAds
+    extends FlutterPangleGlobalAdsPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
   final methodChannel = const MethodChannel('flutter_pangle_global_ads');
 
   @override
   Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
+    final version =
+        await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;
+  }
+
+  @override
+  Future<void> initAd(String appId,
+      {String? appIcon, bool debug = kDebugMode}) async {
+    await methodChannel.invokeMethod(
+        'initAd', {'appId': appId, 'appIcon': appIcon, 'debug': debug});
+  }
+
+  @override
+  Future<void> showSplashAd(String posId, {int timeout = 3000}) async {
+    await methodChannel
+        .invokeMethod('showSplashAd', {'posId': posId, 'timeout': timeout});
   }
 }
