@@ -44,8 +44,9 @@ android {
         implementation 'com.google.android.material:material:1.4.0'
         implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
         implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-        // 广告 SDK 依赖: https://artifact.bytedance.com/repository/pangle/com/pangle/global/ads-sdk/
-        implementation 'com.pangle.global:ads-sdk:6.3.0.3'
+        // 广告 SDK 依赖: https://mvnrepository.com/artifact/com.pangle.global/ads-sdk
+        // SDK 在 Google Play 中的注册信息：https://play.google.com/sdks/details/com-pangle-global-ads-sdk?hl=zh
+        implementation 'com.pangle.global:ads-sdk:6.3.0.4'
         implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
     }
 }

@@ -43,7 +43,6 @@ public class FlutterPangleGlobalAdsPlugin implements FlutterPlugin, ActivityAwar
     this.delegate = new PluginDelegate(binding.getActivity(), bind);
     methodChannel.setMethodCallHandler(delegate);
     eventChannel.setStreamHandler(delegate);
-    this.delegate.registerBannerView();
   }
 
   @Override

@@ -30,12 +30,6 @@
 - 🏆 原生广告 ～ [🚀 Pro 版](https://flutterads.top/)
 - 🏆 横幅广告 ～ [🚀 Pro 版](https://flutterads.top/)
 
-## 🎯 展示效果
-
-| 开屏广告 | 插屏广告 | 激励视频 | 原生广告 | 横幅广告 |
-| :----: | :----: | :----: | :----: | :----: |
-| [<video src="https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/open.744f16bc.mp4"/>](https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/open.744f16bc.mp4) | [<video src="https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/fullpage.d3bb83e6.mp4"/>](https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/fullpage.d3bb83e6.mp4) | [<video src="https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/reward.e5bfb5e6.mp4"/>](https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/reward.e5bfb5e6.mp4) | [<video src="https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/feed.5fb2624d.mp4"/>](https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/feed.5fb2624d.mp4) | [<video src="https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/banner.699c958c.mp4"/>](https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/banner.699c958c.mp4) |
-
 
 ## 📃 接入文档
 

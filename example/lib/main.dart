@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
+import 'dart:io' show Platform;
 
-import 'package:flutter/services.dart';
 import 'package:flutter_pangle_global_ads/flutter_pangle_global_ads.dart';
 
 import 'theme/style.dart';
+import 'ads_config.dart';
 
 void main() async {
   // 绑定引擎
@@ -20,28 +21,50 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
-  final _flutterPangleGlobalAdsPlugin = FlutterPangleGlobalAds();
+  /// 初始化
+  Future<bool> initAds() async {
+    bool result = await FlutterPangleGlobalAds.initAd(
+      appId: AdsConfig.appId,
+    );
+    debugPrint("initAd ===> $result");
+    return result;
+  }
+
+  /// 展示开屏
+  Future<void> showSplashAd() async {
+    bool result = await FlutterPangleGlobalAds.showSplashAd(
+      AdsConfig.posIdOpenVertical,
+    );
+    debugPrint("showSplashAd ===> $result");
+  }
+
+  /// 请求 IDFA 权限
+  Future<void> requestIDFA() async {
+    bool result = await FlutterPangleGlobalAds.requestIDFA();
+    debugPrint("requestIDFA ===> $result");
+  }
+
+  /// 设置广告监听
+  Future<void> setAdEvent() async {
+    FlutterPangleGlobalAds.onEventListener((event) {
+      debugPrint('onEventListener posId:${event.posId} action:${event.action}');
+      if (event is AdErrorEvent) {
+        debugPrint(
+            'onEventListener onAdError posId:${event.posId} errCode:${event.errCode} errMsg:${event.errMsg}');
+      }
+    });
+  }
 
   @override
   void initState() {
     super.initState();
-    initPlatformState();
-  }
-
-  // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {
-    String platformVersion;
-    try {
-      platformVersion = await FlutterPangleGlobalAds.getPlatformVersion() ??
-          'Unknown platform version';
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
-    }
-    if (!mounted) return;
-
-    setState(() {
-      _platformVersion = platformVersion;
+    // 设置广告监听
+    setAdEvent();
+    // 初始化成功，调起开屏广告
+    initAds().then((value) {
+      if (value) {
+        showSplashAd();
+      }
     });
   }
 
@@ -50,21 +73,36 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: const Text('Pangle Global (FlutterAds)'),
         ),
         body: Column(
           children: [
-            Text('$_platformVersion'),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text('Flutter Ads'),
+            ),
+            kDivider,
+            if (Platform.isIOS) ...[
+              kDivider,
+              ListTile(
+                title: const Text('请求 IDFA 权限'),
+                onTap: () {
+                  requestIDFA();
+                },
+              ),
+            ],
             kDivider,
             ListTile(
               title: const Text('初始化'),
-              onTap: () => {FlutterPangleGlobalAds.initAd('8025677')},
+              onTap: () {
+                initAds();
+              },
             ),
             kDivider,
             ListTile(
               title: const Text('开屏广告'),
-              onTap: () => {
-                FlutterPangleGlobalAds.showSplashAd('890000078'),
+              onTap: () {
+                showSplashAd();
               },
             ),
           ],

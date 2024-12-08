@@ -1,6 +1,7 @@
 package com.zero.flutter_pangle_global_ads;
 
 import android.app.Activity;
+import android.text.TextUtils;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -16,7 +17,10 @@ import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
-
+import com.zero.flutter_pangle_global_ads.event.AdEvent;
+import com.zero.flutter_pangle_global_ads.event.AdErrorEvent;
+import com.zero.flutter_pangle_global_ads.event.AdEventHandler;
+import com.zero.flutter_pangle_global_ads.event.AdEventAction;
 
 
 /// 插件代理
@@ -37,10 +41,6 @@ public class PluginDelegate implements MethodChannel.MethodCallHandler, EventCha
         return _instance;
     }
 
-    // Banner View
-    public static final String KEY_BANNER_VIEW = "flutter_gromore_ads_banner";
-    // Feed View
-    public static final String KEY_FEED_VIEW = "flutter_gromore_ads_feed";
     // 广告参数
     public static final String KEY_POSID = "posId";
     // 是否初始化
@@ -72,10 +72,6 @@ public class PluginDelegate implements MethodChannel.MethodCallHandler, EventCha
             initAd(call, result);
         } else if ("showSplashAd".equals(method)) {
             showSplashAd(call, result);
-        } else if ("showInterstitialAd".equals(method)) {
-            showInterstitialAd(call, result);
-        } else if ("showRewardVideoAd".equals(method)) {
-            showRewardVideoAd(call, result);
         } else {
             result.notImplemented();
         }
@@ -117,11 +113,32 @@ public class PluginDelegate implements MethodChannel.MethodCallHandler, EventCha
     }
 
     /**
-     * 展示 Banner 广告
+     * 发送广告事件
+     *
+     * @param action 操作
      */
-    public void registerBannerView() {
-//        bind.getPlatformViewRegistry()
-//                .registerViewFactory(KEY_BANNER_VIEW, new NativeViewFactory(KEY_BANNER_VIEW, this));
+    protected void sendEvent(String posId,String action) {
+        AdEventHandler.getInstance().sendEvent(new AdEvent(posId, action));
+    }
+
+    /**
+     * 发送错误事件
+     *
+     * @param errCode 错误码
+     * @param errMsg  错误事件
+     */
+    protected void sendErrorEvent(String posId,int errCode, String errMsg) {
+        AdEventHandler.getInstance().sendEvent(new AdErrorEvent(posId, errCode, errMsg));
+    }
+
+    /**
+     * 获取图片资源的id
+     *
+     * @param resName 资源名称，不带后缀
+     * @return 返回资源id
+     */
+    private int getMipmapId(String resName) {
+        return activity.getResources().getIdentifier(resName, "mipmap", activity.getPackageName());
     }
 
 
@@ -133,10 +150,8 @@ public class PluginDelegate implements MethodChannel.MethodCallHandler, EventCha
      */
     public void initAd(MethodCall call, final MethodChannel.Result result) {
         String appId = call.argument("appId");
-        String appIcon = call.argument("appIcon");
         Boolean debug = call.argument("debug");
-
-        // 构建基础配置
+        // 构建基础配置x
         PAGConfig config = new PAGConfig.Builder().appId(appId).debugLog(debug).build();
         // 初始化广告
         PAGSdk.init(activity, config, new PAGSdk.PAGInitCallback() {
@@ -171,6 +186,7 @@ public class PluginDelegate implements MethodChannel.MethodCallHandler, EventCha
             public void onError(int code, String message) {
                 Log.e(TAG, "showSplashAd onError code:" + code + " message:" + message);
                 result.success(false);
+                sendErrorEvent(posId, code, message);
             }
 
             @Override
@@ -180,16 +196,19 @@ public class PluginDelegate implements MethodChannel.MethodCallHandler, EventCha
                         @Override
                         public void onAdShowed() {
                             Log.d(TAG, "onAdShowed");
+                            sendEvent(posId, AdEventAction.onAdShowed);
                         }
 
                         @Override
                         public void onAdClicked() {
                             Log.d(TAG, "onAdClicked");
+                            sendEvent(posId, AdEventAction.onAdClicked);
                         }
 
                         @Override
                         public void onAdDismissed() {
                             Log.d(TAG, "onAdDismissed");
+                            sendEvent(posId, AdEventAction.onAdClosed);
                         }
                     });
                     appOpenAd.show(activity);
@@ -197,28 +216,10 @@ public class PluginDelegate implements MethodChannel.MethodCallHandler, EventCha
                 } else {
                     result.success(false);
                 }
+                // 发送事件
+                sendEvent(posId, AdEventAction.onAdLoaded);
             }
         });
-    }
-
-    /**
-     * 显示插屏广告
-     *
-     * @param call   MethodCall
-     * @param result Result
-     */
-    public void showInterstitialAd(MethodCall call, MethodChannel.Result result) {
-        result.success(true);
-    }
-
-    /**
-     * 显示激励视频广告
-     *
-     * @param call   MethodCall
-     * @param result Result
-     */
-    public void showRewardVideoAd(MethodCall call, MethodChannel.Result result) {
-        result.success(true);
     }
 
 }

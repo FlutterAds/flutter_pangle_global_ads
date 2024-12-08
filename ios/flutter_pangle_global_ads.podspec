@@ -4,19 +4,22 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_pangle_global_ads'
-  s.version          = '0.0.1'
-  s.summary          = 'A new Flutter plugin project.'
+  s.version          = '1.0.0'
+  s.summary          = '构建一款优质的 Flutter 广告插件（穿山甲国际版）'
   s.description      = <<-DESC
-A new Flutter plugin project.
+构建优质 Flutter 广告插件
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://global.flutterads.top/'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'FlutterAds' => '1300326388@qq.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
   s.platform = :ios, '12.0'
+  # Pod:https://github.com/CocoaPods/Specs/tree/master/Specs/d/1/c/Ads-Global
+  s.dependency 'Ads-Global', '6.3.1.0'
+  s.static_framework = true
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
