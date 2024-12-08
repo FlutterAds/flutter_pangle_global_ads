@@ -15,9 +15,9 @@
 <img src="https://github.com/FlutterAds/flutter_pangle_global_ads/actions/workflows/flutter.yml/badge.svg">
 <img src=https://img.shields.io/github/stars/FlutterAds/flutter_pangle_global_ads?color=brightgreen>
 </a>
-<a href="https://flutterads.top/">
+<a href="https://global.flutterads.top/">
 <img src="https://img.shields.io/badge/Pro-v2.0.0-success?logo=flutter&logoColor=FFD700"/>
-<a href="https://flutterads.top/">
+<a href="https://global.flutterads.top/">
 <img src="https://img.shields.io/badge/Site-FlutterAds-success?logo=webtrees&logoColor=FFD700"/>
 </a>
 </p>
@@ -25,10 +25,10 @@
 ## 🚀 Features
 
 - ✅ Splash Ad
-- 🏆 Interstitial Ad ～ [🚀 Pro](https://flutterads.top/)
-- 🏆 Rewarded Video ～ [🚀 Pro](https://flutterads.top/)
-- 🏆 Native Ad ～ [🚀 Pro](https://flutterads.top/)
-- 🏆 Banner Ad ～ [🚀 Pro](https://flutterads.top/)
+- 🏆 Interstitial Ad ～ [🚀 Pro](https://global.flutterads.top/)
+- 🏆 Rewarded Video ～ [🚀 Pro](https://global.flutterads.top/)
+- 🏆 Native Ad ～ [🚀 Pro](https://global.flutterads.top/)
+- 🏆 Banner Ad ～ [🚀 Pro](https://global.flutterads.top/)
 
 ## 🎯 Ad Demonstrations
 
@@ -39,7 +39,7 @@
 
 ## 📃 Documentation
 
-- [ 🎯 Quick Integration, Fast Experience, Continuous Updates](https://flutterads.top/)
+- [ 🎯 Quick Integration, Fast Experience, Continuous Updates](https://global.flutterads.top/)
 
 
 ## 📌 FlutterAds Plugin Series
