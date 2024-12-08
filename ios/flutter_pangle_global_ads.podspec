@@ -5,9 +5,9 @@
 Pod::Spec.new do |s|
   s.name             = 'flutter_pangle_global_ads'
   s.version          = '1.0.0'
-  s.summary          = '构建一款优质的 Flutter 广告插件（穿山甲国际版）'
+  s.summary          = 'A professional Flutter advertising plugin for Pangle Global'
   s.description      = <<-DESC
-构建优质 Flutter 广告插件
+A Flutter plugin for integrating Pangle Global advertising SDK
                        DESC
   s.homepage         = 'https://global.flutterads.top/'
   s.license          = { :file => '../LICENSE' }

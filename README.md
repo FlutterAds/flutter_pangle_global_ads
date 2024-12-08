@@ -1,6 +1,6 @@
 <h1 align="center">📱 Flutter Pangle Global Ads</h1>
-<h3 align="center">构建优质 Flutter 广告插件（穿山甲国际版）</h3>
-<p align="center">♻️ 持续更新 ♻️</p>
+<h3 align="center">A Professional Flutter Advertising Plugin (Pangle Global)</h3>
+<p align="center">♻️ Continuously Updated ♻️</p>
 
 <p align="center">
 <a href="README.md">🇬🇧 English </a> | <a href="README_zh.md"> 🇨🇳 中文 </a>
@@ -22,32 +22,32 @@
 </a>
 </p>
 
-## 🚀 核心功能
+## 🚀 Features
 
-- ✅ 开屏广告
-- 🏆 插屏广告 ～ [🚀 Pro 版](https://flutterads.top/)
-- 🏆 激励视频 ～ [🚀 Pro 版](https://flutterads.top/)
-- 🏆 原生广告 ～ [🚀 Pro 版](https://flutterads.top/)
-- 🏆 横幅广告 ～ [🚀 Pro 版](https://flutterads.top/)
+- ✅ Splash Ad
+- 🏆 Interstitial Ad ～ [🚀 Pro](https://flutterads.top/)
+- 🏆 Rewarded Video ～ [🚀 Pro](https://flutterads.top/)
+- 🏆 Native Ad ～ [🚀 Pro](https://flutterads.top/)
+- 🏆 Banner Ad ～ [🚀 Pro](https://flutterads.top/)
 
-## 🎯 展示效果
+## 🎯 Ad Demonstrations
 
-| 开屏广告 | 插屏广告 | 激励视频 | 原生广告 | 横幅广告 |
+| Splash Ad | Interstitial Ad | Rewarded Video | Native Ad | Banner Ad |
 | :----: | :----: | :----: | :----: | :----: |
 | [<video src="https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/open.744f16bc.mp4"/>](https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/open.744f16bc.mp4) | [<video src="https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/fullpage.d3bb83e6.mp4"/>](https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/fullpage.d3bb83e6.mp4) | [<video src="https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/reward.e5bfb5e6.mp4"/>](https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/reward.e5bfb5e6.mp4) | [<video src="https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/feed.5fb2624d.mp4"/>](https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/feed.5fb2624d.mp4) | [<video src="https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/banner.699c958c.mp4"/>](https://sf16-scmcdn-sg.i18n-pglstatp.com/obj/ad-media-static-sg/ad/pangle/homepage_overseas/_next/static/assets/images/banner.699c958c.mp4) |
 
 
-## 📃 接入文档
+## 📃 Documentation
 
-- [ 🎯 极速接入、快速体验、持续更新](https://flutterads.top/)
+- [ 🎯 Quick Integration, Fast Experience, Continuous Updates](https://flutterads.top/)
 
 
-## 📌 广告系列插件（FlutterAds）
-|插件|描述|
+## 📌 FlutterAds Plugin Series
+|Plugin|Description|
 |-|-|
-|[flutter_gromore_ads](https://github.com/FlutterAds/flutter_gromore_ads)|字节跳动、穿山甲、GroMore 聚合 Flutter 广告开源版插件 ~ [🚀 Pro 版](https://flutterads.top/)|
-|[flutter_pangle_ads](https://github.com/FlutterAds/flutter_pangle_ads)|字节跳动、穿山甲 Flutter 广告插件 ~ [🚀 Pro 版](https://flutterads.top/)|
-|[flutter_pangle_global_ads](https://github.com/FlutterAds/flutter_pangle_global_ads)|字节跳动、穿山甲国际版 Flutter 广告插件 ~ [🚀 Pro 版](https://flutterads.top/)|
-|[flutter_qq_ads](https://github.com/FlutterAds/flutter_qq_ads)|腾讯广告、广点通、优量汇 Flutter 广告插件|
-|[flutter_adspark](https://github.com/FlutterAds/flutter_adspark)|巨量广告/穿山甲的广告监测、增长分析、归因上报、事件管理 Flutter 版插件~ [🚀 Pro 版](https://flutterads.top/)|
-|[flutter_adcontent](https://github.com/FlutterAds/flutter_adcontent)|穿山甲内容输出 Flutter 版插件，支持短剧和小视频~ [🚀 Pro 版](https://flutterads.top/)|
+|[flutter_gromore_ads](https://github.com/FlutterAds/flutter_gromore_ads)|ByteDance, Pangle, GroMore aggregation Flutter ad open source plugin ~ [🚀 Pro](https://flutterads.top/)|
+|[flutter_pangle_ads](https://github.com/FlutterAds/flutter_pangle_ads)|ByteDance, Pangle Flutter ad plugin ~ [🚀 Pro](https://flutterads.top/)|
+|[flutter_pangle_global_ads](https://github.com/FlutterAds/flutter_pangle_global_ads)|ByteDance, Pangle Global Flutter ad plugin ~ [🚀 Pro](https://global.flutterads.top/)|
+|[flutter_qq_ads](https://github.com/FlutterAds/flutter_qq_ads)|Tencent Ads, GDT, YLH Flutter ad plugin|
+|[flutter_adspark](https://github.com/FlutterAds/flutter_adspark)|Ocean Engine/Pangle ad tracking, growth analysis, attribution reporting, event management Flutter plugin ~ [🚀 Pro](https://flutterads.top/)|
+|[flutter_adcontent](https://github.com/FlutterAds/flutter_adcontent)|Pangle content output Flutter plugin, supporting short plays and short videos ~ [🚀 Pro](https://flutterads.top/)|

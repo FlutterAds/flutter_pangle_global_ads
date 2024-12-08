@@ -8,7 +8,7 @@ import 'theme/style.dart';
 import 'ads_config.dart';
 
 void main() async {
-  // 绑定引擎
+  // Initialize engine
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
@@ -21,7 +21,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  /// 初始化
+  /// Initialize
   Future<bool> initAds() async {
     bool result = await FlutterPangleGlobalAds.initAd(
       appId: AdsConfig.appId,
@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
     return result;
   }
 
-  /// 展示开屏
+  /// Show splash ad
   Future<void> showSplashAd() async {
     bool result = await FlutterPangleGlobalAds.showSplashAd(
       AdsConfig.posIdOpenVertical,
@@ -38,13 +38,13 @@ class _MyAppState extends State<MyApp> {
     debugPrint("showSplashAd ===> $result");
   }
 
-  /// 请求 IDFA 权限
+  /// Request IDFA permission
   Future<void> requestIDFA() async {
     bool result = await FlutterPangleGlobalAds.requestIDFA();
     debugPrint("requestIDFA ===> $result");
   }
 
-  /// 设置广告监听
+  /// Set ad event listener
   Future<void> setAdEvent() async {
     FlutterPangleGlobalAds.onEventListener((event) {
       debugPrint('onEventListener posId:${event.posId} action:${event.action}');
@@ -58,9 +58,9 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    // 设置广告监听
+    // Set ad event listener
     setAdEvent();
-    // 初始化成功，调起开屏广告
+    // After initialization success, show splash ad
     initAds().then((value) {
       if (value) {
         showSplashAd();
@@ -85,7 +85,7 @@ class _MyAppState extends State<MyApp> {
             if (Platform.isIOS) ...[
               kDivider,
               ListTile(
-                title: const Text('请求 IDFA 权限'),
+                title: const Text('Request IDFA Permission'),
                 onTap: () {
                   requestIDFA();
                 },
@@ -93,14 +93,14 @@ class _MyAppState extends State<MyApp> {
             ],
             kDivider,
             ListTile(
-              title: const Text('初始化'),
+              title: const Text('Initialize'),
               onTap: () {
                 initAds();
               },
             ),
             kDivider,
             ListTile(
-              title: const Text('开屏广告'),
+              title: const Text('Splash Ad'),
               onTap: () {
                 showSplashAd();
               },
