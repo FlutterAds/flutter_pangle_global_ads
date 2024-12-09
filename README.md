@@ -3,7 +3,7 @@
 <p align="center">♻️ Continuously Updated ♻️</p>
 
 <p align="center">
-<a href="README.md">🇬🇧 English </a> | <a href="README_zh.md"> 🇨🇳 中文 </a>
+<a href="https://github.com/FlutterAds/flutter_pangle_global_ads/blob/main/README.md">🇬🇧 English </a> | <a href="https://github.com/FlutterAds/flutter_pangle_global_ads/blob/main/README_zh.md"> 🇨🇳 中文 </a>
 </p>
 
 <p align="center">
