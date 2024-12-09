@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_pangle_global_ads'
-  s.version          = '1.0.0'
+  s.version          = '1.1.0'
   s.summary          = 'A professional Flutter advertising plugin for Pangle Global'
   s.description      = <<-DESC
 A Flutter plugin for integrating Pangle Global advertising SDK

@@ -1,5 +1,8 @@
-## 1.0.0
+## 1.1.0
+* 📚 Documentation optimization
+* 🎥 Add effect screenshots
 
+## 1.0.0
 * 🎉 First Pangle Global advertising plugin for FlutterAds
 * 🚀 Support Splash Ad, Interstitial Ad, Rewarded Video, Native Ad, Banner Ad
 * 📱 Support Android and iOS platforms
