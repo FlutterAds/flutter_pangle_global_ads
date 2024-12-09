@@ -34,7 +34,7 @@
 
 | Splash Ad | Interstitial Ad | Rewarded Video | Native Ad | Banner Ad |
 | :----: | :----: | :----: | :----: | :----: |
-| ![](https://raw.githubusercontent.com/FlutterAds/flutter_pangle_global_ads/refs/heads/main/example/images/open.webp) | ![](https://raw.githubusercontent.com/FlutterAds/flutter_pangle_global_ads/refs/heads/main/example/images/fullpage.webp) | ![](https://raw.githubusercontent.com/FlutterAds/flutter_pangle_global_ads/refs/heads/main/example/images/reward.webp) | ![](https://raw.githubusercontent.com/FlutterAds/flutter_pangle_global_ads/refs/heads/main/example/images/feed.webp) | ![](https://raw.githubusercontent.com/FlutterAds/flutter_pangle_global_ads/refs/heads/main/example/images/banner.webp) |
+| ![](https://raw.githubusercontent.com/FlutterAds/flutter_pangle_global_ads/refs/heads/main/example/images/open.webp) | ![](https://raw.githubusercontent.com/FlutterAds/flutter_pangle_global_ads/refs/heads/main/example/images/insert.webp) | ![](https://raw.githubusercontent.com/FlutterAds/flutter_pangle_global_ads/refs/heads/main/example/images/reward.webp) | ![](https://raw.githubusercontent.com/FlutterAds/flutter_pangle_global_ads/refs/heads/main/example/images/feed.webp) | ![](https://raw.githubusercontent.com/FlutterAds/flutter_pangle_global_ads/refs/heads/main/example/images/banner.webp) |
 
 
 ## 📃 Documentation

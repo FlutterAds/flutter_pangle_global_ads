@@ -3,7 +3,7 @@
 <p align="center">♻️ 持续更新 ♻️</p>
 
 <p align="center">
-<a href="README.md">🇬🇧 English </a> | <a href="README_zh.md"> 🇨🇳 中文 </a>
+<a href="https://github.com/FlutterAds/flutter_pangle_global_ads/blob/main/README.md">🇬🇧 English </a> | <a href="https://github.com/FlutterAds/flutter_pangle_global_ads/blob/main/README_zh.md"> 🇨🇳 中文 </a>
 </p>
 
 <p align="center">
@@ -29,6 +29,12 @@
 - 🏆 激励视频 ～ [🚀 Pro 版](https://global.flutterads.top/)
 - 🏆 原生广告 ～ [🚀 Pro 版](https://global.flutterads.top/)
 - 🏆 横幅广告 ～ [🚀 Pro 版](https://global.flutterads.top/)
+
+## 🎯 展示效果
+
+| 开屏广告 | 插屏广告 | 激励视频 | 原生广告 | 横幅广告 |
+| :----: | :----: | :----: | :----: | :----: |
+| ![](https://raw.githubusercontent.com/FlutterAds/flutter_pangle_global_ads/refs/heads/main/example/images/open.webp) | ![](https://raw.githubusercontent.com/FlutterAds/flutter_pangle_global_ads/refs/heads/main/example/images/insert.webp) | ![](https://raw.githubusercontent.com/FlutterAds/flutter_pangle_global_ads/refs/heads/main/example/images/reward.webp) | ![](https://raw.githubusercontent.com/FlutterAds/flutter_pangle_global_ads/refs/heads/main/example/images/feed.webp) | ![](https://raw.githubusercontent.com/FlutterAds/flutter_pangle_global_ads/refs/heads/main/example/images/banner.webp) |
 
 
 ## 📃 接入文档
